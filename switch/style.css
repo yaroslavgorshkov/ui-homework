@@ -1,0 +1,73 @@
+:root {
+    --main-grey-color: #555555;
+    --main-light-green-color: #01be0e;
+    --main-dark-green-color: #007b08;
+    --main-white-color: #fff;
+}
+
+.switch {
+    position: relative;
+    cursor: pointer;
+    padding: 20px;
+    max-width: 60px;
+}
+
+.switch .switch-box {
+    height: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.switch-on-box {
+    background-color: var(--main-dark-green-color);
+}
+
+.switch-off-box {
+    background-color: var(--main-grey-color);
+}
+
+.switch .switch-toggler {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 30px;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.switch .switch-toggler:hover .switch-toggler__area {
+    opacity: 0.2;
+}
+
+.switch .switch-toggler .switch-toggler__area {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.switch-on-toggler-area {
+    background-color: var(--main-dark-green-color);
+}
+
+.switch-off-toggler-area {
+    background-color: var(--main-grey-color);
+}
+
+.switch-on-toggler {
+    background-color: var(--main-light-green-color);
+    left: calc(100% - 20px);
+}
+
+.switch-off-toggler {
+    background-color: var(--main-white-color);
+    left: 20px;
+}

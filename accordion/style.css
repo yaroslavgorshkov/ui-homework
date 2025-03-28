@@ -1,0 +1,50 @@
+.accordion {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion .accordion__element {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion .accordion__element .accordion__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.accordion .accordion__element .accordion__btn .accordion__btn-svg-container svg {
+    display: flex;
+    align-items: center;
+}
+
+.accordion .accordion__element .accordion__btn .accordion__btn-svg-container {
+    transition: all 0.3s ease;
+}
+
+.accordion .accordion__element .accordion__element-content {
+    overflow: hidden;
+    transition: max-height 0.3s;
+    border: 1px solid #565655;
+    border-top: none;
+    padding: 0 10px;
+}
+
+.d-block {
+    max-height: 1000px;
+}
+
+.d-none {
+    max-height: 0;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.non-rotated {
+    transform: rotate(0deg);
+}
+

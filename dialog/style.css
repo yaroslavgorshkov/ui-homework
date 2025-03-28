@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-green-color: #2bcf6a;
+    --main-gray-color: #616161;
+    --main-blue-color: #73d3fd;
+    --main-light-blue-transparent-color: #90dbfb3c;
+    --main-light-gray-color: #e0e0e0;
+    --main-light-green-color: #47ff8e;
+    --main-white-color: #fff;
+    --main-black-color: #000;
+}
+
+body {
+    height: 200dvh;
+    font-family: Roboto;
+}
+
+button {
+    font-family: Roboto; 
+}
+
+.dialog {
+    position: relative;
+}
+
+.dialog .dialog-btn {
+    border-radius: 4px;
+    background-color: var(--main-light-green-color);
+    border: 1px solid var(--main-green-color);
+    padding: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    border-width: 2px;
+}
+
+.dialog .dialog-btn:hover {
+    background-color: var(--main-green-color);
+}
+
+.dialog .dialog-content {
+    position: fixed;
+    inset: 0;
+    transition: opacity 0.3s;
+}
+
+.dialog .dialog-content .dialog-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: space-between;
+    background-color: var(--main-gray-color);
+    border-radius: 4px;
+    width: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+.dialog .dialog-content .dialog-content-wrapper .dialog-content__header {
+    margin: 0;
+    color: var(--main-white-color);
+    font-size: 1.4rem;
+}
+
+.dialog .dialog-content .dialog-content-wrapper .dialog-content__text {
+    margin: 20px 0 40px;
+    color: var(--main-light-gray-color);
+}
+
+.dialog .dialog-content .dialog-content-wrapper .dialog-content__btn-wrapper {
+    align-self: self-end;
+    cursor: default;
+}
+
+.dialog .dialog-content .dialog-content-wrapper .dialog-content__btn-wrapper .dialog-content__btn {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--main-blue-color);
+    transition: background-color 0.3s;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.dialog .dialog-content .dialog-content-wrapper .dialog-content__btn-wrapper .dialog-content__btn:hover {
+    background-color: var(--main-light-blue-transparent-color);
+}
+
+.dialog .dialog-content .dialog-content-background {
+    position: absolute;
+    inset: 0;
+    background-color: var(--main-black-color);
+    opacity: 0.4;
+    z-index: 10;
+}
+
+.d-none {
+    display: none;
+    opacity: 0;
+}
+
+.d-fixed {
+    display: fixed;
+    opacity: 1;
+}

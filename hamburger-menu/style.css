@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-darken-gray-color: #515151;
+    --main-gray-color: #616161;
+    --main-blue-color: #73d3fd;
+    --main-light-blue-transparent-color: #90dbfb3c;
+    --main-light-gray-transparent-color: #b0b0b03c;
+    --main-light-gray-color: #d8d8d8;
+    --main-white-color: #fff;
+    --main-black-color: #000;
+    --main-dark-color: #202020;
+    --main-light-dark-color: #464646;
+    --main-darken-dark-color: #343434;
+}
+
+body, button {
+    font-family: Roboto;
+    background-color: var(--main-dark-color);
+    font-size: 2rem;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+.hamburger-menu {
+    position: relative;
+}
+
+.hamburger-menu .hamburger-menu-btn {
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    position: relative;
+}
+
+.hamburger-menu .hamburger-menu-btn .hamburger-menu-btn__svg-container {
+    transition: opacity 0.3s;
+}
+
+.hamburger-menu .hamburger-menu-btn .hamburger-menu-btn__svg-container.hamburger-menu-btn__svg-container--close {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.d-block-svg {
+    opacity: 1;
+}
+
+.d-none-svg {
+    opacity: 0;
+}
+
+.hamburger-menu .hamburger-menu-content {
+    position: absolute;
+    top: 0;
+    background-color: var(--main-gray-color);
+    z-index: -10;
+    padding: 50px 0 40px;
+    border-radius: 0 0 20px 0;
+    min-width: 400px;
+
+    transition: left 0.3s;
+}
+
+.hamburger-menu .hamburger-menu-content .hamburger-menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hamburger-menu .hamburger-menu-content .hamburger-menu-list .hamburger-menu-list__element {
+    padding: 10px 60px;
+    font-weight: 600;
+    color: var(--main-light-gray-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    width: calc(90% - 120px);
+}
+
+.hamburger-menu .hamburger-menu-content .hamburger-menu-list .hamburger-menu-list__element img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+}
+
+.active {
+    background-color: var(--main-light-dark-color);
+    transition: background-color 0.3s;
+}
+
+.active:hover {
+    background-color: var(--main-darken-dark-color);
+}
+
+.passive {
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.passive:hover {
+    background-color: var(--main-darken-gray-color);
+}
+
+.d-none {
+    left: -400px;
+}
+
+.d-block {
+    left: 0px;
+}

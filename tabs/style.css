@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-gray-color: #616161;
+    --main-blue-color: #73d3fd;
+    --main-light-blue-transparent-color: #90dbfb3c;
+    --main-light-gray-transparent-color: #b0b0b03c;
+    --main-light-gray-color: #c8c8c8;
+    --main-white-color: #fff;
+    --main-black-color: #000;
+    --main-dark-color: #202020;
+}
+
+body, button {
+    font-family: Roboto;
+    background-color: var(--main-dark-color);
+    font-size: 1.1rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+.unfocused:hover {
+    background-color: var(--main-light-gray-transparent-color);
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid var(--main-gray-color);
+    background-color: var(--main-dark-color);
+}
+
+.tabs .tabs-btn-wrapper {
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.tabs .tabs-btn-wrapper .tabs-btn__element {
+    padding: 10px;
+    border: none;
+    width: 120px;
+    font-weight: 600;
+    border-radius: 4px 4px 0 0;
+    color: var(--main-light-gray-color);
+}
+
+.tabs .tabs-btn-wrapper .tabs-btn-underline {
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--main-blue-color);
+    top: 40px;
+    left: 0px;
+    transition: left 0.3s ease;
+}
+
+.tabs .tabs-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-gray-color);
+}
+
+.tabs .tabs-content {
+    padding: 10px;
+}
+
+.tabs .tabs-content .tabs-content__element {
+    color: var(--main-white-color);
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.focused {
+    background-color: var(--main-light-blue-transparent-color);
+    color: var(--main-blue-color) !important;
+}
+
+.unfocused {
+    background-color: transparent;
+}

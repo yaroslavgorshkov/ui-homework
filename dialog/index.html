@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dialog</title>
+</head>
+<body>
+    <div class="dialog">
+        <button class="dialog-btn">
+            OPEN ALERT DIALOG
+        </button>
+        <div class="dialog-content d-none">
+            <div class="dialog-content-wrapper">
+                <h4 class="dialog-content__header">Use Google's location service?</h4>
+                <p class="dialog-content__text">
+                    Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.
+                </p>
+                <div class="dialog-content__btn-wrapper">
+                    <button class="dialog-content__btn">
+                        AGREE
+                    </button>
+                    <button class="dialog-content__btn">
+                        DISAGREE
+                    </button>
+                </div>
+            </div>
+            <div class="dialog-content-background"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
