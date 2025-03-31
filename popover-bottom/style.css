@@ -10,7 +10,7 @@ body {
 
 .popover {
     position: relative;
-    max-width: 200px;
+    max-width: 300px;
 }
 
 .popover .popover-btn {
@@ -35,13 +35,16 @@ body {
 .popover .popover-content-wrapper {
     position: absolute;
     top: calc(100% + 2px);
-    left: 24px;
     padding: 10px;
     border: 1px solid var(--main-grey-color);
     border-radius: 4px;
     z-index: 10;
-
+    transform: translateX(-50%);
     transition: opacity 0.3s;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-white-color);
 }
 
 .popover .popover-content-wrapper .popover-content-arrow {
